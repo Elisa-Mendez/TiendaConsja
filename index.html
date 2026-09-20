@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONSJA Suministros | Insumos de Oficina y Limpieza Industrial</title>
+  <meta name="description" content="Tienda oficial B2B de CONSJA, S. DE R.L. DE C.V. Suministros y artículos de oficina con entrega en México, facturación CFDI y envío gratuito.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span class="tag-free-shipping">ENVÍO GRATUITO</span>
+    <span>En todas tus compras a nivel nacional | Entrega de 3 a 5 días hábiles</span>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <!-- Logo & Brand -->
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <div class="brand-icon-inner"></div>
+          </div>
+          <div class="brand-text">
+            <h1>CONSJA <span>Suministros</span></h1>
+            <p>CONSJA, S. DE R.L. DE C.V.</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links">
+          <a href="#catalogo" class="nav-link">Catálogo</a>
+          <a href="#garantia" class="nav-link">Garantía & Envíos</a>
+          <a href="admin.html" class="nav-link nav-link-admin" title="Panel de operación para modificar precios y stock">
+            <span>Panel Operación</span>
+            <span class="badge-demo">Demo</span>
+          </a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <button id="open-cart-btn" class="cart-btn" aria-label="Abrir carrito de compras">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span>Carrito</span>
+            <span id="cart-counter" class="cart-counter zero">0</span>
+          </button>
+
+          <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Abrir menú">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="#catalogo" class="nav-link">Catálogo de Productos</a>
+        <a href="#garantia" class="nav-link">Políticas Comerciales</a>
+        <a href="admin.html" class="nav-link nav-link-admin">
+          <span>Panel de Operación (Admin)</span>
+          <span class="badge-demo">Demo</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <span>Suministros Corporativos B2B · México</span>
+      </div>
+      <h2 class="hero-title">
+        Insumos institucionales con <span class="highlight">entrega garantizada</span> para tu empresa
+      </h2>
+      <p class="hero-desc">
+        Abastece las necesidades de limpieza y suministros de tu oficina o pequeño negocio. Precios netos en MXN sin intermediarios, existencias en tiempo real y despacho seguro a toda la República.
+      </p>
+
+      <div class="hero-features">
+        <div class="feature-chip">
+          <span class="icon">✓</span>
+          <span>Envío $0.00 MXN</span>
+        </div>
+        <div class="feature-chip">
+          <span class="icon">⏱</span>
+          <span>3 a 5 días hábiles</span>
+        </div>
+        <div class="feature-chip">
+          <span class="icon">📄</span>
+          <span>Factura CFDI 4.0</span>
+        </div>
+        <div class="feature-chip">
+          <span class="icon">💳</span>
+          <span>Tarjeta & SPEI</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#catalogo" class="btn-primary">
+          <span>Ver Catálogo Inmediato</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </a>
+        <button id="hero-cart-btn" class="btn-secondary">
+          <span>Revisar Carrito</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Callout (Addressing Activity 1) -->
+  <div class="container">
+    <div class="diagnostic-banner">
+      <div>
+        <span class="banner-badge">Experiencia de Compra Optimizada</span>
+        <h3>Venta en línea directa y sin burocracia comercial</h3>
+        <p>
+          Precios transparentes en MXN, stock en tiempo real y botones directos de compra sin formularios innecesarios de 8 campos obligatorios.
+        </p>
+      </div>
+      <div>
+        <a href="admin.html" class="nav-link nav-link-admin" style="font-size: 0.8rem; padding: 0.6rem 1rem;">
+          ⚙ Administrar Inventario y Precios
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catalog Section -->
+  <section id="catalogo" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">Catálogo Oficial</span>
+          <h3 class="section-title">Productos Disponibles para Despacho</h3>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">
+          * Todos los importes están en MXN y omiten impuestos según el caso.
+        </div>
+      </div>
+
+      <!-- Products Grid (Rendered by JS) -->
+      <div id="products-container" class="products-grid">
+        <!-- Skeleton / Loading -->
+        <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
+          Cargando catálogo institucional...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section id="garantia" style="background: var(--bg-card); padding: 4rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div style="max-width: 48rem; margin: 0 auto; text-align: center;">
+        <span class="section-subtitle">Compromiso CONSJA</span>
+        <h3 class="section-title" style="margin-bottom: 1rem;">Políticas Comerciales Claras</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2.5rem;">
+          Atendemos los requerimientos de responsables de compras y administradores de empresas en todo el país, garantizando procesos claros desde el pago hasta la entrega.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: left;">
+          <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <strong style="color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">📦 Envíos Gratuitos</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">El costo de envío es absorbido íntegramente por CONSJA ($0.00 MXN para tu empresa).</p>
+          </div>
+          <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <strong style="color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">⏱ 3 a 5 Días Hábiles</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Tiempos de entrega calculados tras confirmar el pago. No se garantiza entrega al día siguiente.</p>
+          </div>
+          <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <strong style="color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">📑 Facturación Inmediata</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Factura electrónica con CFDI disponible para personas físicas y morales con RFC.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>CONSJA Suministros</h4>
+          <p style="color: var(--accent-light); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.5rem;">
+            CONSJA, S. DE R.L. DE C.V.
+          </p>
+          <p style="font-size: 0.75rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+            Ingeniería Industrial · Diseño Industrial · Construcción
+          </p>
+          <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+            Av. Insurgentes Sur 634, Piso 3, Oficina 303, Col. Del Valle Norte, CDMX, C.P. 03103.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Condiciones</h5>
+          <ul class="footer-links">
+            <li>Envío 100% gratuito a comprador</li>
+            <li>Entrega estimada 3 a 5 días hábiles</li>
+            <li>No prometemos entrega al día siguiente</li>
+            <li>Tarjeta bancaria y Transferencia SPEI</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Administración</h5>
+          <ul class="footer-links">
+            <li><a href="#catalogo">Catálogo en Vivo</a></li>
+            <li><a href="admin.html">Panel de Operación (Admin)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CONSJA, S. DE R.L. DE C.V. Todos los derechos reservados.</p>
+        <p>Vanilla HTML5 / CSS3 / ES6 Modules (Sin Frameworks)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Off-Canvas Cart Drawer -->
+  <div id="cart-overlay" class="cart-drawer-overlay"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Carrito de compras">
+    <div class="drawer-header">
+      <h3>Tu Carrito</h3>
+      <button id="close-cart-btn" class="drawer-close-btn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+
+    <div id="cart-items-container" class="drawer-body">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <div id="cart-footer" class="drawer-footer" style="display: none;">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal" class="total-amount">$0.00 MXN</span>
+      </div>
+
+      <!-- Bloque de Cupón y Descuento Comercial -->
+      <div class="discount-section">
+        <label for="discount-code-input" class="discount-label">
+          Descuento Comercial Autorizado
+        </label>
+        <div class="discount-controls">
+          <input type="text" id="discount-code-input" placeholder="Ej. DESC5" class="form-input discount-input">
+          <button type="button" id="apply-discount-btn" class="btn-secondary btn-discount">
+            Aplicar
+          </button>
+        </div>
+        <div id="discount-message" class="discount-message"></div>
+      </div>
+
+      <!--Resumen de subtotales-->
+      
+      <div class="summary-row discount-row-highlight" id="discount-row" hidden>
+        <span>Descuento Comercial (5%)</span>
+        <span id="discount-amount">-$0.00 MXN</span>
+      </div>
+      
+      <div class="summary-row">
+        <span>Costo de Envío</span>
+        <span class="text-emerald">Gratuito ($0.00 MXN)</span>
+      </div>
+      
+      <div class="summary-row total">
+        <span>Total a Pagar</span>
+        <span id="cart-total" class="total-amount">$0.00 MXN</span>
+      </div>
+      
+      <button id="proceed-checkout-btn" class="btn-checkout">
+        Proceder al Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Finalizar Pedido Corporativo</h3>
+        <button id="close-checkout-btn" class="drawer-close-btn" aria-label="Cerrar modal">&times;</button>
+      </div>
+
+      <form id="checkout-form" class="modal-body" novalidate>
+        <!-- Contact details -->
+        <h4 style="font-size: 0.85rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem;">
+          1. Datos de Contacto y Compras
+        </h4>
+
+        <div class="form-group">
+          <label class="form-label">Nombre Completo del Responsable *</label>
+          <input type="text" name="fullName" class="form-input" placeholder="Ej. Ing. Carlos Mendoza" required minlength="3">
+          <span class="form-error" style="display: none;">Ingresa un nombre válido (mínimo 3 letras).</span>
+        </div>
+
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label class="form-label">Correo Electrónico *</label>
+            <input type="email" name="email" class="form-input" placeholder="compras@empresa.com" required>
+            <span class="form-error" style="display: none;">Ingresa un correo electrónico corporativo válido.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono (10 dígitos) *</label>
+            <input type="tel" name="phone" class="form-input" placeholder="5512345678" maxlength="10" required pattern="[0-9]{10}">
+            <span class="form-error" style="display: none;">Ingresa los 10 dígitos numéricos de tu teléfono.</span>
+          </div>
+        </div>
+
+        <!-- Optional Invoice (CFDI) -->
+        <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; color: var(--blue);">
+            <input type="checkbox" id="require-invoice-check" name="requiresInvoice">
+            <span>¿Requiere Factura Fiscal (CFDI)?</span>
+          </label>
+
+          <div id="invoice-fields" style="display: none; margin-top: 0.75rem;" class="form-row two-cols">
+            <div class="form-group">
+              <label class="form-label">Razón Social o Empresa *</label>
+              <input type="text" name="companyName" class="form-input" placeholder="Comercializadora S.A. de C.V.">
+            </div>
+            <div class="form-group">
+              <label class="form-label">RFC (12 o 13 dígitos) *</label>
+              <input type="text" name="rfc" class="form-input" placeholder="CNO010203AB1" maxlength="13" style="text-transform: uppercase;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping address -->
+        <h4 style="font-size: 0.85rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-top: 0.5rem;">
+          2. Dirección de Entrega en México
+        </h4>
+
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label class="form-label">Calle y No. Exterior *</label>
+            <input type="text" name="street" class="form-input" placeholder="Av. Insurgentes Sur 634" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Colonia *</label>
+            <input type="text" name="neighborhood" class="form-input" placeholder="Col. Del Valle Norte" required>
+          </div>
+        </div>
+
+        <div class="form-row three-cols">
+          <div class="form-group">
+            <label class="form-label">Código Postal *</label>
+            <input type="text" name="postalCode" class="form-input" placeholder="03103" maxlength="5" required pattern="[0-9]{5}">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Municipio / Alcaldía *</label>
+            <input type="text" name="city" class="form-input" placeholder="Benito Juárez" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Estado *</label>
+            <select name="state" class="form-select" required>
+              <option value="Ciudad de México">Ciudad de México</option>
+              <option value="Estado de México">Estado de México</option>
+              <option value="Jalisco">Jalisco</option>
+              <option value="Nuevo León">Nuevo León</option>
+              <option value="Puebla">Puebla</option>
+              <option value="Querétaro">Querétaro</option>
+              <option value="Veracruz">Veracruz</option>
+              <option value="Yucatán">Yucatán</option>
+              <!-- Más estados agregados por JS -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <h4 style="font-size: 0.85rem; font-weight: 800; color: var(--primary); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-top: 0.5rem;">
+          3. Método de Pago
+        </h4>
+
+        <div class="payment-toggle">
+          <div id="payment-opt-card" class="payment-option active">
+            <strong>💳 Tarjeta Bancaria</strong>
+            <p>Débito o Crédito. Pago simulado con aprobación inmediata.</p>
+          </div>
+          <div id="payment-opt-spei" class="payment-option">
+            <strong>🏦 Transferencia SPEI</strong>
+            <p>Banca en línea con CLABE interbancaria BBVA.</p>
+          </div>
+        </div>
+
+        <div id="card-simulated-fields" style="background: var(--bg-main); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <div class="form-row two-cols">
+            <div class="form-group">
+              <label class="form-label">Número de Tarjeta (Simulado)</label>
+              <input type="text" class="form-input" value="4152 3134 5678 9012" readonly style="font-family: var(--font-mono); background: #fff;">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Titular</label>
+              <input type="text" class="form-input" value="CARLOS MENDOZA" readonly style="background: #fff;">
+            </div>
+          </div>
+          <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.35rem;">
+            * Ambiente de prueba seguro. El pedido quedará en estado <strong>PAGADO</strong>.
+          </p>
+        </div>
+
+        <div id="spei-notice" style="display: none; background: #fef3c7; border: 1px solid #fde68a; padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: #78350f;">
+          <strong>Aviso de Transferencia SPEI:</strong> Al confirmar, tu orden quedará como <strong>PENDIENTE DE PAGO</strong> y te mostraremos la CLABE de CONSJA para transferir. El despacho iniciará tras la conciliación bancaria.
+        </div>
+
+        <div class="delivery-alert-box">
+          <strong>Tiempo estimado de entrega:</strong> 3 a 5 días hábiles después de confirmación de pago (no se garantiza entrega al día siguiente).
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-order-btn" class="btn-checkout" style="width: 100%;">
+          Confirmar y Generar Pedido
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="confirmation-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>¡Pedido Confirmado con Éxito!</h3>
+        <button id="close-confirmation-btn" class="drawer-close-btn" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div id="confirmation-content" class="modal-body">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main JavaScript App (ES Modules) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

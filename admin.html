@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Operación e Inventario | CONSJA Suministros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body style="background: #f1f5f9;">
+
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <div class="container">
+      <div class="admin-header-content">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+            <span class="admin-badge">Operación Interna</span>
+            <span style="font-size: 0.75rem; color: #94a3b8;">Acceso sin contraseñas para demostración</span>
+          </div>
+          <h1>Panel de Operación e Inventario</h1>
+          <p>
+            CONSJA, S. DE R.L. DE C.V. — Control en caliente de precios, existencias y conciliación de pedidos para la evaluación técnica.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button id="reset-catalog-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.55rem 1rem;">
+            ↺ Restaurar Caso Original
+          </button>
+          <a href="index.html" class="btn-primary" style="font-size: 0.8rem; padding: 0.55rem 1rem;">
+            ← Ir a la Tienda Pública
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stats Row -->
+    <div class="admin-stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">SKUs en Catálogo</span>
+        <span id="stat-skus" class="stat-value">3</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Unidades en Almacén</span>
+        <span id="stat-stock" class="stat-value">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Pedidos Registrados</span>
+        <span id="stat-orders" class="stat-value">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Ventas Simuladas</span>
+        <span id="stat-revenue" class="stat-value">$0.00</span>
+      </div>
+    </div>
+
+    <!-- Section 1: Catalog Inventory Management -->
+    <section class="admin-section">
+      <div class="section-top">
+        <div>
+          <h2>Administración de Productos y Precios</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">
+            Edita los precios de venta y las existencias en tiempo real. Los cambios se guardan localmente y se reflejan de inmediato en la tienda pública.
+          </p>
+        </div>
+
+        <div>
+          <button id="quick-enable-kit-btn" class="btn-reconcile" style="background: var(--blue);">
+            ⚡ Habilitar KIT-01 (Poner 10 piezas en stock)
+          </button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Producto & Características</th>
+              <th style="text-align: center;">Costo Interno (Confidencial)</th>
+              <th style="text-align: center;">Precio Venta (MXN)</th>
+              <th style="text-align: center;">Stock Disponible</th>
+              <th style="text-align: center;">Estado</th>
+              <th style="text-align: right;">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="admin-products-table-body">
+            <!-- Dynamic products rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Orders Log -->
+    <section class="admin-section">
+      <div class="section-top">
+        <div>
+          <h2>Pedidos Registrados en la Sesión</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">
+            Monitorea los pedidos generados por compradores y simula la conciliación bancaria de pagos con transferencia SPEI.
+          </p>
+        </div>
+        <span id="orders-count-badge" style="font-size: 0.75rem; font-weight: 700; background: var(--bg-main); padding: 0.35rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border);">
+          0 Pedidos
+        </span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Folio</th>
+              <th>Fecha</th>
+              <th>Comprador & Empresa</th>
+              <th>Artículos</th>
+              <th>Método</th>
+              <th style="text-align: right;">Total (MXN)</th>
+              <th style="text-align: center;">Estado de Pago</th>
+              <th style="text-align: right;">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="admin-orders-table-body">
+            <!-- Dynamic orders rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Summary of Case Parameters -->
+    <section class="admin-section" style="background: #f8fafc;">
+      <h3 style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; color: var(--primary); margin-bottom: 0.75rem;">
+        Parámetros Operativos del Caso CONSJA
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+        <div style="background: #ffffff; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Margen Bruto por SKU</strong>
+          <p>• MIC-10: Venta $400 / Costo $240 (Margen: 40%)</p>
+          <p>• DIS-01: Venta $700 / Costo $420 (Margen: 40%)</p>
+          <p>• KIT-01: Venta $1,000 / Costo $600 (Margen: 40%)</p>
+        </div>
+        <div style="background: #ffffff; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Políticas Comerciales</strong>
+          <p>• Descuento máximo autorizado: <strong>5%</strong>.</p>
+          <p>• Costo de envío absorbido por CONSJA: <strong>$100</strong>.</p>
+          <p>• Entrega estándar: <strong>3 a 5 días hábiles</strong>.</p>
+        </div>
+        <div style="background: #ffffff; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Despacho y Pago</strong>
+          <p>• Tarjeta: Aprobación inmediata (PAGADO).</p>
+          <p>• Transferencia SPEI: Se concilia con CLABE y Folio de Referencia antes del despacho.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Admin Script -->
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
